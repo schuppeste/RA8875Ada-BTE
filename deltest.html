@@ -1,0 +1,44 @@
+<html>
+<head>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '546163975399466',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+);
+</script></head>
+<body>
+<script>
+// Only works after `FB.init` is called
+function myFacebookLogin() {
+  FB.login(function(){}, {scope: 'publish_actions'});
+}
+
+</script>
+<button onclick="myFacebookLogin()">Login with Facebook</button>
+<script>
+
+   FB.api(
+  '/154401841306130/',
+  'GET',
+  {"fields":"feed{from,comments{id,from}}"},
+  function(response) {
+      // Insert your code here
+	    console.log(response);
+  }
+  </script>
+</body>
+</html>
