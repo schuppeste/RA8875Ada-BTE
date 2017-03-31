@@ -11,10 +11,15 @@ Added Functions
  	
 Change Layer :
   tft.layerEffect(OR);
+  
   tft.writeTo(1);
+  
   tft.dispicown(0,0, 480,272,0); //Set Background
+  
   tft.writeTo(2);
+  
   tft.dispicown(100,100, 35,70,0); //Set Foreground
+  
 	
   
   With BTE_MOVE you can Copy From Layer To Layer or Clipping to Clipping.
