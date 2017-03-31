@@ -26,11 +26,15 @@ Change Layer :
 
 Example Scrolltext:
 
-  tft.BTE_move(18, 224, 450, 306, 0, 224, 1, 1);// Move The Line 1 Pix To the left and copy over itself
+  tft.BTE_move(18, 224, 450, 306, 0, 224, 1, 1);
+  // Move The Line 1 Pix To the left and copy over itself
   
   scroller++;
-//Every Charwidth Steps add the next visible char At End of Line
+  
+  //Every Charwidth Steps add the next visible char At End of Line
+
 if(Scroller>=Charwidthpx)
+
 tft.dispicown(26+(z*18),194, Charwidthpx,Charheigthpx,(uint32_t)1982780+((uint32_t)((uint32_t)firstline[z]-(uint32_t)33)*(uint32_t)1080));
 
   
