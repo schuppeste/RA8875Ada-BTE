@@ -10,7 +10,7 @@ Added Functions
 	void CutPictrue(uchar picnum,uint x1,uint y1,uint x2,uint y2,unsigned long x,unsigned long y);
  	
 Change Layer :
-  tft.layerEffect(OR); 
+  tft.layerEffect(OR);
   tft.writeTo(1);
   tft.dispicown(0,0, 480,272,0); //Set Background
   tft.writeTo(2);
