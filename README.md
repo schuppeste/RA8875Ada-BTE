@@ -43,5 +43,5 @@ if(Scroller>=Charwidthpx)
 
 tft.dispicown(26+(z*18),194, Charwidthpx,Charheigthpx,(uint32_t)1982780+((uint32_t)((uint32_t)firstline[z]-(uint32_t)33)*(uint32_t)1080));
 
-  
+[![Effekts](https://img.youtube.com/vi/3Kj4yj5m_5E/0.jpg)](https://www.youtube.com/watch?v=3Kj4yj5m_5E)  
   
