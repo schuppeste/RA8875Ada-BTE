@@ -11,7 +11,6 @@ char mychar[6] = "00:00";
 
 void setup()
 {
-  Serial1.begin(115200);
   Serial.begin(115200);
   Serial.println("RA8875 start");
   if (!tft.begin(RA8875_480x272)) {
@@ -32,7 +31,7 @@ void setup()
   tft.writeTo(2);
   tft.fillScreen(RA8875_BLACK);
   tft.dispic(1);
-  tft.dispicown(0, 0, 480, 188, 2345420); //Dispicown(startx,starty,width,height, Flashadress)
+  tft.dispicown(0, 0, 480, 232, 0); //Dispicown(startx,starty,width,height, Flashadress)
   //Copy to Blocktransfert to Screen startx,starty with*height @ startadress 
   //see Library files for more Information!!
 }
@@ -46,14 +45,14 @@ void loop()
   //first ascii char begins with ascii Code 33
   // So we calculate every char ->>>> Font-Startaddress+((asciiCode-33)*(FontWidth*fontHeight))
   
-  if (mychar[0] != oldtime[0])
-    tft.dispicown(60, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[0] - (uint32_t)33) * (uint32_t)16660));
-  if (mychar[1] != oldtime[1])
-    tft.dispicown(130, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[1] - (uint32_t)33) * (uint32_t)16660));
-  if (mychar[2] != oldtime[2])
-    tft.dispicown(200, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[2] - (uint32_t)33) * (uint32_t)16660));
-  if (mychar[3] != oldtime[3])
-    tft.dispicown(270, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[3] - (uint32_t)33) * (uint32_t)16660));
-  if (mychar[4] != oldtime[4])
-    tft.dispicown(340, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[4] - (uint32_t)33) * (uint32_t)16660));
+ // if (mychar[0] != oldtime[0])
+ //   tft.dispicown(60, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[0] - (uint32_t)33) * (uint32_t)16660));
+  //if (mychar[1] != oldtime[1])
+  //  tft.dispicown(130, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[1] - (uint32_t)33) * (uint32_t)16660));
+  //if (mychar[2] != oldtime[2])
+  //  tft.dispicown(200, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[2] - (uint32_t)33) * (uint32_t)16660));
+  //if (mychar[3] != oldtime[3])
+  //  tft.dispicown(270, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[3] - (uint32_t)33) * (uint32_t)16660));
+  //if (mychar[4] != oldtime[4])
+  //  tft.dispicown(340, 65, 70, 119, (uint32_t)16660 + ((uint32_t)((uint32_t)mychar[4] - (uint32_t)33) * (uint32_t)16660));
 }
