@@ -5,12 +5,18 @@ Added Function
 dispicown(startx,starty,width,height, Startaddress)
 BTE Transfer from Flash@startaddress to Screen startx,starty with size width*height
 
-void CutPictrue(uchar picnum,uint x1,uint y1,uint x2,uint y2,unsigned long x,unsigned long y);
- 	void	 	BTE_moveFrom(int16_t SX,int16_t SY);
+	void CutPictrue(uchar picnum,uint x1,uint y1,uint x2,uint y2,unsigned long x,unsigned long y);
+ 	
+	void	 	BTE_moveFrom(int16_t SX,int16_t SY);
+	
 	void	 	BTE_moveTo(int16_t DX,int16_t DY);
+	
 	void		BTE_ropcode(unsigned char setx);//
+	
 	void 		BTE_enable(bool on);//
+	
 	void 		BTE_dataMode(enum RA8875btedatam m);//CONT,RECT
+	
 	void 		BTE_layer(enum RA8875btelayer sd,uint8_t l);//SOURCE,DEST - 1 or 2
   
   With BTE_MOVE you can Copy From Layer To LAyer or Clipping to Clipping.
