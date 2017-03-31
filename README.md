@@ -1,9 +1,11 @@
 # RA8875Ada-BTE
 Adafruit 1.0.0 old Library with BTE Extension for SPI-Flash
 
-Added Function 
-dispicown(startx,starty,width,height, Startaddress)
-BTE Transfer from Flash@startaddress to Screen startx,starty with size width*height
+Added Functions
+
+	dispicown(startx,starty,width,height, Startaddress)
+
+	BTE Transfer from Flash@startaddress to Screen startx,starty with size width*height
 
 	void CutPictrue(uchar picnum,uint x1,uint y1,uint x2,uint y2,unsigned long x,unsigned long y);
  	
