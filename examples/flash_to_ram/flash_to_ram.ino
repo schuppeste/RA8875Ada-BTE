@@ -38,7 +38,7 @@ void setup()
 
 void loop()
 {
-  delay(1000)
+  delay(1000);
   //example Time Library:
   //sprintf(mychar, "%2.2d:%2.2d", hour(), minute()); //Anzeigeformat Uhrzeit
   //the trick, we sort Fontbitmaps in ascii-code order so we can calculate and access every char with:
