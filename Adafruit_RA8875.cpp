@@ -490,11 +490,13 @@ void Adafruit_RA8875::graphicsMode(void) {
 /**************************************************************************/
 boolean Adafruit_RA8875::waitPoll(uint8_t regname, uint8_t waitflag) {
   /* Wait for the command to finish */
+  long timeout=millis();
   while (1)
   {
     uint8_t temp = readReg(regname);
     if (!(temp & waitflag))
       return true;
+  if ((millis() - timeout) > 20) return false;
   }  
   return false; // MEMEFIX: yeah i know, unreached! - add timeout?
 }
